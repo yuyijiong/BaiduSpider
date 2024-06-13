@@ -46,9 +46,12 @@ class Parser(BaseSpider):
             if found:
                 break
             idx_ += 1
-        num = int(
-            str(ele.text).strip("百度为您找到相关结果").strip("约").strip("个").replace(",", "")
-        )
+        try:
+            num = int(
+                str(ele.text).strip("百度为您找到相关结果").strip("约").strip("个").replace(",", "")
+            )
+        except:
+            warnings.warn("未找到搜索结果数量")
         # 定义预结果（运算以及相关搜索）
         pre_results = []
         # 预处理新闻
@@ -311,7 +314,7 @@ class Parser(BaseSpider):
             "results": result,
             # 最大页数
             # "pages": max(pages),
-            "total": num,
+            "total": len(result),
         }
 
     def parse_web_normal(self, content: str, exclude: list) -> dict:
