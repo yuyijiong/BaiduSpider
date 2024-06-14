@@ -143,9 +143,9 @@ $ pip install baiduspider
 #### 从 GitHub 手动安装
 
 ```sh
-$ git clone git@github.com:BaiduSpider/BaiduSpider.git
+$ git clone https://github.com/yuyijiong/BaiduSpider.git
 
-# ...
+$ cd BaiduSpider
 
 $ python setup.py install
 ```
@@ -154,7 +154,9 @@ $ python setup.py install
 <!-- USAGE EXAMPLES -->
 ## 简单使用
 
-你可以使用以下代码，通过 BaiduSpider 获取百度的网页搜索结果：
+你可以使用以下代码，通过 BaiduSpider 获取百度的网页搜索结果
+
+（不获取网页内容，只获取标题和网址）：
 
 ```python
 # 导入BaiduSpider
@@ -167,11 +169,8 @@ spider = BaiduSpider()
 # 搜索网页
 pprint(spider.search_web(query='Python'))
 ```
-## 新功能（测试版，可能有未知bug）
-获取网页正文
 
-_更多样例和配置，请参照[文档](https://baiduspider.github.io)_
-
+如果想要获取网页具体内容，请使用 ```examples/百度搜索网页内容.py``` 中的代码。
 
 
 <!-- ROADMAP -->
