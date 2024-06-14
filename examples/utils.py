@@ -291,7 +291,7 @@ def get_baike_content(baike:WebBaike, headers=None):
 # 将百度百科内容转换为文本
 def baike_content_to_text(item: EncyclopediaItem, keep_reference=True):
     # 将name、name_en、name_other转换为文本
-    name_text = ' '.join(name for name in [item['name'], item['name_en'], item['name_other']] if name)
+    name_text = '/'.join(name for name in [item['name'], item['name_en'], item['name_other']] if name)
 
     # 将summary转换为文本
     summary_text = str(item['summary'])

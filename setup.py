@@ -11,7 +11,7 @@ setuptools.setup(
     description="BaiduSpider，一个爬取百度的利器",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/BaiduSpider/BaiduSpider",
+    url="https://github.com/yuyijiong/BaiduSpider.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",

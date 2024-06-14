@@ -137,17 +137,7 @@ $ python --version
 请在命令行中键入：
 
 ```sh
-$ pip install baiduspider
-```
-
-#### 从 GitHub 手动安装
-
-```sh
-$ git clone https://github.com/yuyijiong/BaiduSpider.git
-
-$ cd BaiduSpider
-
-$ python setup.py install
+$ pip install git+https://github.com/yuyijiong/BaiduSpider
 ```
 
 
